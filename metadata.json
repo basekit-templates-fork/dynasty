@@ -1,7 +1,7 @@
 {
-    "name":"Keystone",
-    "thumbnail":"keystone.png",
-    "screenshot":"keystone.png",
+    "name":"Dynasty",
+    "thumbnail":"dynasty.png",
+    "screenshot":"dynasty.png",
     "templateType":"standard",
     "pageTypes": ["home"],
     "tags": {
@@ -9,6 +9,10 @@
     "es": ["limpio", "ecommerce", "tienda"],
     "br": ["limpo", "ecommerce", "loja"]
     },
+    "images":[
+        "images/logo.png",
+        "images/feature-bg.jpg",
+    ],
     "colorSwatches":
     {
         "Swatch 1": {
