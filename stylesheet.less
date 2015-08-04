@@ -225,11 +225,6 @@ body {
             		color: @color-swatch1;
             	}
 	        }
-	        a {
-	        	&:hover {
-	        		color: lighten(@color-swatch5, 60%);
-	        	}
-	        }
         }
 
     }
@@ -318,12 +313,16 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 
 .widget.feature .feature-bgimg {
     height: 100%;
+    &:after {
+        content: none!important;
+    }
 }
 
 .widget.feature .feature-bgimg .content {
 	padding: 100px 40px;
 	height: 100%;
 	text-align: center;
+    background-color: fade(@color-swatch4, 80%);
 	@media @mobile {
 		padding: 100px 20px;
 		-webkit-overflow-scrolling: touch;
@@ -348,7 +347,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 		}
 	}
 	h2 {
-		padding-bottom: 12px;
+		padding-bottom: 20px;
 		@media @mobile {
 			font-size: bkscale(@font-swatch1-font-size, 0.68);
 			line-height: bkscale(@font-swatch1-line-height, 0.75);
@@ -385,6 +384,11 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 			vertical-align: text-bottom;
 		}
 	}
+}
+
+.widget.feature h3 span {
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
 }
 
 /* 5. Main */
@@ -1169,7 +1173,7 @@ input {
 	line-height: 50px;
 }
 
-input, .widget.profile form fieldset input, .widget.ecombasket .ecombasket-pull, .widget.ecombasket .ecombasket-pull p, .widget.paypalbuynow .widget.button.paypal, a.checkout-empty-link, button {
+input, .widget.profile form fieldset input, .widget.ecombasket .ecombasket-pull, .widget.ecombasket .ecombasket-pull p, a.checkout-empty-link, button {
 	color: darken(@color-swatch2, 50%);
 	background-color: @color-swatch1;
 	border-radius: 0;
@@ -1190,9 +1194,10 @@ input, .widget.profile form fieldset input, .widget.ecombasket .ecombasket-pull,
             }
         }
 
-.widget.dropbox button {
+.widget.dropbox button, .widget.paypalbuynow .widget.button.paypal {
 	&:hover {
     	background-color: darken(@color-swatch3, 10%);
+        border-radius: 0;
     }
 }
 
@@ -1228,7 +1233,6 @@ input.blog-search-input, .widget.signupform input, .widget.profile form fieldset
 }
 
 .widget.paypalbuynow .widget.button.paypal:hover {
-	.border-radius(4px);
 	border: none!important;
 	.transition(all, 0.5s, ease);
 }
@@ -1236,6 +1240,10 @@ input.blog-search-input, .widget.signupform input, .widget.profile form fieldset
 textarea {
 	.border-radius (@radius: 4px);
 	padding-top: 10px;
+}
+
+.signupform {
+    margin-bottom: 20px;
 }
 
 .widget {
@@ -1383,6 +1391,10 @@ hr.line {
 .widget.gallery .inner:hover .image-data {
 	.transition( opacity, 0.5s, ease );
 	opacity: 1;
+}
+
+.widget.image span.image-title, .widget.image span.image-description {
+    text-align: initial;
 }
 
 // Twitter Feed
