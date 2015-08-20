@@ -579,8 +579,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 			    @media @mobile {
 			    	font-size: bkscale(@font-swatch1-font-size, 0.5);
 				    line-height: bkscale(@font-swatch1-line-height, 0.5);
-				    padding: 0.8em;
-				    margin-bottom: 20px;
+				    padding: 10px 0;
 			    }
 			}
 			// Content
@@ -597,6 +596,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 		}
 		// Meta data
 		.blog-post-metadata {
+            margin-bottom: 20px;
 			// Date
 			time.blog-post-publish-date {
 				color: @color-swatch5;
@@ -659,15 +659,11 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
 					.blog-post-tag {
 						a {
 							display: inline-block;
-							padding: 0em 0.7em;
-							background-color: @font-swatch7-background-color;
-							color: @font-swatch7-color;
+							padding: 0em 0.1em;
+							background-color: transparent;
+							color: @color-swatch3;
 							letter-spacing: 1px;
-
-							&:hover {
-								text-decoration: none;
-								background-color: @font-swatch7-background-color;
-							}
+                            margin-bottom: 5px;
 						}
 					}
 				}
@@ -1222,7 +1218,8 @@ input.blog-search-input, .widget.signupform input, .widget.profile form fieldset
 			.border-radius(4px);
 			display: inline-block;
 			margin-right: 0;
-			width: 74%;
+			width: 70%;
+            margin-bottom: 10px;
 		}
 	}
 	button {
@@ -1261,11 +1258,6 @@ textarea {
         input, textarea {
             border: 2px solid darken(@color-swatch2, 2%);
             border-radius: 0;
-            &.email {
-                @media @mobile {
-                    width: 70%;
-                }
-            }
         }
         button.btn {
         	color: darken(@color-swatch2, 50%);
@@ -1472,7 +1464,6 @@ hr.line {
 		}
 		.slideshow-widget-controls {
 			.dot {
-				background-color: fade(@color-swatch1, 65%);
 				.border-radius(100px);
 				&.selected {
 					background-color: @color-swatch3;
@@ -1657,4 +1648,12 @@ body, html {
 ::-webkit-scrollbar {
 	width: 0px!important;
 	height: 0px!important;
+}
+
+.clicktocall a:hover {
+    background-color: @color-swatch3;
+}
+
+.widget.dropbox button:hover {
+    border: 0;
 }
