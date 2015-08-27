@@ -694,6 +694,7 @@ div.widget .extendednavigation > ul, div.widget.extendednavigation > ul {
     	}
         ul {
             text-align: left;
+            border-bottom: 1px solid darken(@color-swatch7, 2%);
         }
 
         li {
@@ -1365,6 +1366,7 @@ textarea {
         	border: 2px solid darken(@color-swatch2, 50%);
         	background-color: @color-swatch1;
         	border-radius: 0;
+            margin-left: -4px;
         	 &:hover {
             	background-color: @color-swatch1;
             	border: 2px solid lighten(@color-swatch3, 5%);
@@ -1734,4 +1736,8 @@ body, html {
 
 .ecom-product-go-to-checkout-btn:hover {
     background-color: darken(@color-swatch3, 10%);
+}
+
+.widget {
+    margin: 0 0 10px 0;
 }
